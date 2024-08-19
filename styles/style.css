@@ -760,44 +760,16 @@ article h2 {
   width: 40%;
   background-color: var(--span-color);
 }
-.heart-checkbox {
-  display: none;
+.heart__button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  margin-top: 5px;
+  outline: none;
+  color: rgb(181, 178, 178);
 }
-.heart-label {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
+button i:hover {
   cursor: pointer;
-  background-color: rgb(220, 217, 221);
-  border-color: var(--heart-button-color);
-
-  transform: rotate(-45deg);
-  transition: background-color 0.3s ease;
-}
-.heart-label::before,
-.heart-label::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: inherit;
-}
-.heart-label::before {
-  top: -10px;
-  left: 0;
-}
-.heart-label::after {
-  left: 10px;
-  top: 0;
-}
-.heart-checkbox:checked + .heart-label {
-  background-color: var(--heart-button-color);
-}
-.heart-checkbox:checked + .heart-label::before,
-.heart-checkbox:checked + .heart-label::after {
-  background-color: var(--heart-button-color);
 }
 .ongoing-info form {
   margin-top: 21px;
