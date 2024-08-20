@@ -116,7 +116,7 @@ a:hover {
   border: none;
   background-color: transparent;
 }
-@media (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .header__nav__list {
     display: none;
   }
@@ -124,6 +124,8 @@ a:hover {
   .burger__menu {
     display: block;
     margin-left: auto;
+    margin-right: 30px;
+    overflow: hidden;
   }
 
   .logo__div {
@@ -133,6 +135,10 @@ a:hover {
   .header-content {
     justify-content: space-between;
     padding: 10px 20px;
+    max-width: 95%;
+  }
+  .hero__section {
+    width: 95%;
   }
 }
 
@@ -279,8 +285,15 @@ a:hover {
   max-width: 500px;
   position: relative;
 }
-
-@media (max-width: 992px) {
+@media only screen and (max-width: 567px) {
+  .text-content h3 {
+    margin-top: 50px;
+  }
+  .text-content h2 {
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 992px) {
   .hero__content {
     flex-direction: column;
     text-align: center;
@@ -294,12 +307,6 @@ a:hover {
     max-width: 100%;
     text-align: center;
   }
-
-  .plane-one,
-  .plane-two {
-    display: none;
-  }
-
   .decorative-image {
     display: none;
   }
@@ -308,7 +315,7 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .text-content h2 {
     font-size: 48px;
   }
@@ -328,7 +335,7 @@ a:hover {
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .hero__section {
     padding: 40px 0;
   }
@@ -446,7 +453,22 @@ h6 {
   width: 153px;
   height: 166px;
 }
-
+@media only screen and (max-width: 1024px) {
+  .categories__container h2 {
+    font-size: 30px;
+  }
+  .categories__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    place-items: center;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .destinations__container h2 {
   text-transform: capitalize;
   margin-bottom: 70px;
@@ -540,6 +562,23 @@ h6 {
   left: 1010px;
   position: absolute;
   z-index: -1;
+}
+@media only screen and (max-width: 1024px) {
+  .destinations__container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .spiral {
+    display: none;
+  }
+  .cards__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__item {
+    height: 400px;
+  }
 }
 .trip__booking {
   display: flex;
@@ -644,9 +683,22 @@ article h2 {
 .trip-paragraph {
   margin-left: 25px;
 }
+@media only screen and (max-width: 1024px) {
+  .trip__booking {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .trip__booking h2 {
+    font-size: 30px;
+    margin-bottom: 31px;
+    height: 7%;
+  }
+}
 .peoples__opinion form {
   margin-top: 82px;
 }
+
 .peoples__opinion input[type="radio"] {
   display: none;
 }
@@ -863,6 +915,44 @@ button i:hover {
   top: 70px;
   right: -50px;
 }
+@media only screen and (max-width: 1024px) {
+  .peoples__opinion__section {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    overflow: hidden;
+  }
+  .peoples__opinion h2 {
+    font-size: 30px;
+  }
+  .peoples__opinion-title {
+    width: 409px;
+    height: 80px;
+  }
+  .peoples__opinion form {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .person__img {
+    position: absolute;
+    top: 0px;
+    left: 72px;
+  }
+  .peoples__opinion__section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .scroll {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .peoples__opinion__section {
+    margin-bottom: 0px;
+  }
+}
 .companies {
   display: flex;
   justify-content: center;
@@ -914,6 +1004,34 @@ button i:hover {
 .alitalia {
   width: 94px;
   height: 21px;
+}
+@media only screen and (max-width: 1024px) {
+  .companies-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    place-items: center;
+    width: 500px;
+    height: 350px;
+    margin: 50px;
+  }
+  .companies {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+  .alitalia-logo {
+    justify-self: center;
+    justify-self: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .companies {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 .subscribe__section {
   margin-bottom: 200px;
@@ -972,16 +1090,11 @@ button i:hover {
 .material-symbols-outlined {
   color: var(--dot-color);
 }
-.email-submit {
+.subscribe__form__container button {
   width: 180px;
   height: 68px;
   border-radius: 10px;
   background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.email-submit input {
   outline: none;
   border: none;
   background-color: transparent;
@@ -1030,6 +1143,47 @@ button i:hover {
 .sending__button img {
   width: 50px;
   height: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .circle-decor {
+    display: none;
+  }
+
+  .subscribe__form__container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .subscribe__form__container button {
+    width: 100%;
+  }
+  .subscribe__title__container {
+    max-width: 90%;
+  }
+  .subscr-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subscribe--title {
+    max-width: 50%;
+  }
+  .subscribe__title__container h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .plus__sign__container2 {
+    display: none;
+  }
+  .subscribe__section {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    max-width: 95%;
+  }
 }
 footer {
   display: flex;
@@ -1137,4 +1291,34 @@ footer {
   line-height: 17.43px;
   text-align: left;
   color: var(--progress-color);
+}
+@media only screen and (max-width: 1024px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--background-color);
+  }
+  .copyright__container h6 {
+    padding: 30px;
+  }
+  .social__links button {
+    background: transparent;
+  }
+  .stories {
+    padding-bottom: 20px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  footer {
+    max-width: 95%;
+  }
+}
+@media only screen and (max-width: 568px) {
+  footer {
+    max-width: 100%;
+  }
 }
