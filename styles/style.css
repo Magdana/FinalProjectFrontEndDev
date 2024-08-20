@@ -285,12 +285,17 @@ a:hover {
   max-width: 500px;
   position: relative;
 }
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 375px) {
   .text-content h3 {
     margin-top: 50px;
+    text-align: center;
   }
   .text-content h2 {
     line-height: 50px;
+    text-align: center;
+  }
+  .text-content p {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -469,6 +474,20 @@ h6 {
     flex-direction: column-reverse;
   }
 }
+@media only screen and (max-width: 375px) {
+  .plus__signs__contaier {
+    display: none;
+  }
+  .services {
+    margin-top: 0px;
+  }
+  .categories__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .destinations__container h2 {
   text-transform: capitalize;
   margin-bottom: 70px;
@@ -578,6 +597,11 @@ h6 {
   }
   .card__item {
     height: 400px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .destinations__container {
+    margin-top: 60px;
   }
 }
 .trip__booking {
@@ -693,6 +717,39 @@ article h2 {
     font-size: 30px;
     margin-bottom: 31px;
     height: 7%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .trip__booking h5 {
+    text-align: center;
+  }
+  .trip__booking h2 {
+    text-align: center;
+    width: 400px;
+    height: 130px;
+    line-height: 40px;
+    padding: 0px 60px;
+    margin-bottom: 0px;
+  }
+  .trip-info {
+    max-width: 300px;
+  }
+  .trip-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-left: 40px;
+  }
+  .greece__trip__section {
+    width: 400px;
+    height: 459px;
+  }
+  .ongoing-trip {
+    position: static;
+    left: 0px;
+    margin-top: 200px;
   }
 }
 .peoples__opinion form {
@@ -948,9 +1005,21 @@ button i:hover {
     right: 30px;
   }
 }
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 375px) {
   .peoples__opinion__section {
     margin-bottom: 0px;
+    margin-top: 200px;
+  }
+  .peoples__opinion h5 {
+    text-align: center;
+  }
+  .peoples__opinion h2 {
+    text-align: center;
+    width: 300px;
+    line-height: 45px;
+  }
+  .peoples__comment {
+    max-width: 300px;
   }
 }
 .companies {
@@ -1185,6 +1254,29 @@ button i:hover {
     max-width: 95%;
   }
 }
+@media only screen and (max-width: 375px) {
+  .subscribe--title {
+    max-width: 200px;
+  }
+  .subscr-cont h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .subscribe__title__container {
+    padding: 0px 20px;
+    height: auto;
+  }
+  .subscribe__section {
+    display: flex;
+    justify-content: center;
+  }
+  .subscribe__form__container button {
+    max-width: 200px;
+  }
+  .email-info {
+    max-width: 200px;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -1216,7 +1308,6 @@ footer {
 }
 .usefull__links {
   display: flex;
-  align-items: center;
   gap: 91px;
 }
 .link__title {
@@ -1320,5 +1411,10 @@ footer {
 @media only screen and (max-width: 568px) {
   footer {
     max-width: 100%;
+  }
+  .usefull__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
