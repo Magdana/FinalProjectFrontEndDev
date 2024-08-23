@@ -36,6 +36,7 @@
   --poppins-font-family: "Poppins", sans-serif;
   --volkhov-font-family: "Volkhov", serif;
   --open-sans-font-family: "Open Sans", sans-serif;
+  --montserat-font-family: "Montserrat", sans-serif;
 }
 .container {
   max-width: 1440px;
@@ -226,18 +227,24 @@ a:hover {
   color: var(--white-color);
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   font-size: 18px;
   width: 170px;
   height: 60px;
   font-family: var(--open-sans-font-family);
   box-shadow: 0px 0px 35px 0px #f1a50126;
+  transition: transform 0.2s;
+}
+.find__more_btn:hover {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .play__demo_btn {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: transform 0.2s;
 }
 
 .play__demo-class {
@@ -253,9 +260,9 @@ a:hover {
   box-shadow: 0px 0px 30px 0px #df69514d;
 }
 .play__demo-class:hover {
-  border: 2px solid rgb(145, 74, 8);
   transition-duration: 0.4s;
   cursor: pointer;
+  transform: scale(1.05);
 }
 .triangle {
   width: 0;
@@ -1133,6 +1140,10 @@ button i:hover {
   color: var(--h2-text-color);
   width: 881px;
 }
+.subscribe__form__container {
+  position: relative;
+  z-index: 999999;
+}
 .email-info {
   width: 421px;
   height: 68px;
@@ -1142,11 +1153,11 @@ button i:hover {
   display: flex;
   align-items: center;
   background-color: var(--white-color);
-  padding: 31px;
+  padding: 5px 20px;
 }
 .email-info input {
   border: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserat-font-family);
   font-size: 14px;
   font-weight: 400;
   line-height: 17.07px;
@@ -1159,7 +1170,7 @@ button i:hover {
 .material-symbols-outlined {
   color: var(--dot-color);
 }
-.subscribe__form__container button {
+.email-submit {
   width: 180px;
   height: 68px;
   border-radius: 10px;
@@ -1174,6 +1185,11 @@ button i:hover {
   text-align: center;
   color: var(--white-color);
 }
+.email-submit:hover {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  transform: scale(1.05);
+}
 .subscribe__form__container form {
   display: flex;
   gap: 24px;
@@ -1186,13 +1202,13 @@ button i:hover {
   position: absolute;
   bottom: -40px;
   left: -20px;
-  z-index: -1;
+  z-index: -10;
 }
 .circle__decoration2 {
   position: absolute;
   top: 2px;
   right: 0px;
-  z-index: -1;
+  z-index: -10;
 }
 .circle__decoration2 img {
   transform: rotate(-90deg);
